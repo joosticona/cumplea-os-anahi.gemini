@@ -6,7 +6,8 @@
 document.addEventListener('DOMContentLoaded', () => {
   const welcomeOverlay = document.getElementById('welcome-overlay');
   const startBtn = document.getElementById('start-celebration-btn');
-  const playSongBtn = document.getElementById('play-song-btn');
+  const fireworksBtn = document.getElementById('fireworks-btn');
+  const fireworksMsg = document.getElementById('fireworks-msg');
   const musicToggleBtn = document.getElementById('music-toggle');
   const musicLabel = document.getElementById('music-label');
   const blowBtn = document.getElementById('blow-candles-btn');
@@ -316,10 +317,24 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   }
 
-  if (playSongBtn) {
-    playSongBtn.addEventListener('click', () => {
-      launchConfetti(80);
-      startBackgroundMusic();
+  const fireworksQuotes = [
+    '✨ ¡Los fuegos artificiales estallan celebrando tu sonrisa, mi Anahí hermosa! 🎆',
+    '💙 Cada destello en el cielo representa todo lo que te amo y te admiro 💜',
+    '🎇 ¡Que tu vida siempre esté iluminada por la felicidad y nuestro amor! ✨',
+    '🌟 ¡Brillas más que cualquier estrella en este día tan especial! 💫',
+    '🎉 ¡Feliz cumpleaños al amor de mi vida, mi compañera y mi alegría eterna! 💖',
+  ];
+  let quoteIndex = 0;
+
+  if (fireworksBtn) {
+    fireworksBtn.addEventListener('click', () => {
+      launchConfetti(140);
+      initAudio();
+      playWishChime();
+      if (fireworksMsg) {
+        fireworksMsg.textContent = fireworksQuotes[quoteIndex];
+        quoteIndex = (quoteIndex + 1) % fireworksQuotes.length;
+      }
     });
   }
 
