@@ -17,7 +17,11 @@
 
 body {
   min-height: 100vh;
-  font-family: 'Quicksand', system-ui, -apple-system, sans-serif;
+  font-family:
+    'Quicksand',
+    system-ui,
+    -apple-system,
+    sans-serif;
   color: #ffffff;
   background: linear-gradient(135deg, #1e40af 0%, #6d28d9 52%, #b975f8 100%);
   background-size: 200% 200%;
@@ -27,13 +31,20 @@ body {
 }
 
 @keyframes gradientFlow {
-  0% { background-position: 0% 50%; }
-  50% { background-position: 100% 50%; }
-  100% { background-position: 0% 50%; }
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
 }
 
 /* Lienzo de partículas y confeti */
-#bg-canvas, #confetti-canvas {
+#bg-canvas,
+#confetti-canvas {
   position: fixed;
   top: 0;
   left: 0;
@@ -52,12 +63,19 @@ body {
   position: fixed;
   inset: 0;
   z-index: 100;
-  background: radial-gradient(circle at center, rgba(124, 58, 237, 0.94) 0%, rgba(30, 64, 175, 0.98) 60%, rgba(168, 85, 247, 0.96) 100%);
+  background: radial-gradient(
+    circle at center,
+    rgba(124, 58, 237, 0.94) 0%,
+    rgba(30, 64, 175, 0.98) 60%,
+    rgba(168, 85, 247, 0.96) 100%
+  );
   display: flex;
   align-items: center;
   justify-content: center;
   padding: 1.5rem;
-  transition: opacity 0.8s ease, visibility 0.8s ease;
+  transition:
+    opacity 0.8s ease,
+    visibility 0.8s ease;
 }
 
 .welcome-overlay.hidden {
@@ -76,20 +94,32 @@ body {
   border-radius: 28px;
   padding: 2.5rem 1.8rem;
   text-align: center;
-  box-shadow: 0 20px 50px rgba(15, 23, 42, 0.45), 0 0 30px rgba(192, 132, 252, 0.35);
+  box-shadow:
+    0 20px 50px rgba(15, 23, 42, 0.45),
+    0 0 30px rgba(192, 132, 252, 0.35);
   animation: floatCard 4s ease-in-out infinite;
 }
 
 @keyframes floatCard {
-  0%, 100% { transform: translateY(0px); }
-  50% { transform: translateY(-8px); }
+  0%,
+  100% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-8px);
+  }
 }
 
 .sparkle-badge {
   display: inline-block;
   padding: 0.4rem 1rem;
   border-radius: 999px;
-  background: linear-gradient(90deg, rgba(37, 99, 235, 0.65), rgba(147, 51, 234, 0.65), rgba(192, 132, 252, 0.65));
+  background: linear-gradient(
+    90deg,
+    rgba(37, 99, 235, 0.65),
+    rgba(147, 51, 234, 0.65),
+    rgba(192, 132, 252, 0.65)
+  );
   border: 1px solid rgba(255, 255, 255, 0.4);
   font-size: 0.85rem;
   font-weight: 700;
@@ -124,16 +154,23 @@ body {
   font-weight: 700;
   color: #ffffff;
   background: linear-gradient(90deg, #2563eb 0%, #7c3aed 50%, #c084fc 100%);
-  box-shadow: 0 10px 25px rgba(124, 58, 237, 0.5), 0 0 0 3px rgba(233, 213, 255, 0.35);
-  transition: transform 0.25s ease, box-shadow 0.25s ease;
+  box-shadow:
+    0 10px 25px rgba(124, 58, 237, 0.5),
+    0 0 0 3px rgba(233, 213, 255, 0.35);
+  transition:
+    transform 0.25s ease,
+    box-shadow 0.25s ease;
   display: inline-flex;
   align-items: center;
   gap: 0.6rem;
 }
 
-.btn-primary:hover, .btn-primary:active {
+.btn-primary:hover,
+.btn-primary:active {
   transform: scale(1.05);
-  box-shadow: 0 14px 30px rgba(192, 132, 252, 0.65), 0 0 0 4px rgba(255, 255, 255, 0.5);
+  box-shadow:
+    0 14px 30px rgba(192, 132, 252, 0.65),
+    0 0 0 4px rgba(255, 255, 255, 0.5);
 }
 
 /* Botón flotante de música */
@@ -178,8 +215,13 @@ body {
 }
 
 @keyframes pulseDot {
-  0%, 100% { transform: scale(1); }
-  50% { transform: scale(1.4); }
+  0%,
+  100% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.4);
+  }
 }
 
 /* Contenedor Principal */
@@ -199,7 +241,12 @@ body {
   text-align: center;
   padding: 2.4rem 1.5rem;
   border-radius: 28px;
-  background: linear-gradient(145deg, rgba(37, 99, 235, 0.28), rgba(124, 58, 237, 0.28), rgba(192, 132, 252, 0.28));
+  background: linear-gradient(
+    145deg,
+    rgba(37, 99, 235, 0.28),
+    rgba(124, 58, 237, 0.28),
+    rgba(192, 132, 252, 0.28)
+  );
   backdrop-filter: blur(14px);
   border: 1.5px solid var(--glass-border);
   box-shadow: 0 18px 40px rgba(23, 37, 84, 0.35);
@@ -295,7 +342,7 @@ body {
   );
   border-radius: 6px 6px 2px 2px;
   position: relative;
-  box-shadow: 0 4px 10px rgba(0,0,0,0.25);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.25);
   cursor: pointer;
 }
 
@@ -312,16 +359,26 @@ body {
 .flame {
   width: 16px;
   height: 26px;
-  background: radial-gradient(ellipse at bottom, #ffffff 10%, #fde047 45%, #f97316 85%, transparent 100%);
+  background: radial-gradient(
+    ellipse at bottom,
+    #ffffff 10%,
+    #fde047 45%,
+    #f97316 85%,
+    transparent 100%
+  );
   border-radius: 50% 50% 35% 35%;
   position: absolute;
   top: -31px;
   left: 50%;
   transform: translateX(-50%);
-  box-shadow: 0 0 18px #fde047, 0 0 32px #c084fc;
+  box-shadow:
+    0 0 18px #fde047,
+    0 0 32px #c084fc;
   animation: flicker 0.9s ease-in-out infinite alternate;
   transform-origin: bottom center;
-  transition: opacity 0.35s ease, transform 0.35s ease;
+  transition:
+    opacity 0.35s ease,
+    transform 0.35s ease;
 }
 
 .candle.out .flame {
@@ -347,14 +404,26 @@ body {
 }
 
 @keyframes flicker {
-  0% { transform: translateX(-50%) scale(1) rotate(-2deg); }
-  50% { transform: translateX(-50%) scale(1.07, 0.96) rotate(2deg); }
-  100% { transform: translateX(-50%) scale(0.96, 1.05) rotate(-1deg); }
+  0% {
+    transform: translateX(-50%) scale(1) rotate(-2deg);
+  }
+  50% {
+    transform: translateX(-50%) scale(1.07, 0.96) rotate(2deg);
+  }
+  100% {
+    transform: translateX(-50%) scale(0.96, 1.05) rotate(-1deg);
+  }
 }
 
 @keyframes smokeRise {
-  0% { opacity: 0.85; transform: translate(-50%, 0) scale(0.8); }
-  100% { opacity: 0; transform: translate(-50%, -38px) scale(2.6); }
+  0% {
+    opacity: 0.85;
+    transform: translate(-50%, 0) scale(0.8);
+  }
+  100% {
+    opacity: 0;
+    transform: translate(-50%, -38px) scale(2.6);
+  }
 }
 
 /* Capas del pastel en Azul, Morado y Lila */
@@ -411,6 +480,32 @@ body {
   gap: 0.75rem;
 }
 
+.cake-relight-wrapper {
+  margin-top: 0.85rem;
+  display: flex;
+  justify-content: center;
+}
+
+.btn-subtle {
+  appearance: none;
+  background: transparent;
+  border: 1px solid rgba(233, 213, 255, 0.3);
+  color: #e9d5ff;
+  padding: 0.4rem 0.9rem;
+  border-radius: 999px;
+  font-family: inherit;
+  font-size: 0.85rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.btn-subtle:hover {
+  background: rgba(233, 213, 255, 0.15);
+  color: #ffffff;
+  border-color: rgba(233, 213, 255, 0.6);
+}
+
 .btn-secondary {
   appearance: none;
   border: 1.5px solid rgba(233, 213, 255, 0.5);
@@ -438,19 +533,28 @@ body {
 }
 
 .moment-card {
-  background: linear-gradient(150deg, rgba(30, 64, 175, 0.42), rgba(109, 40, 217, 0.42), rgba(192, 132, 252, 0.32));
+  background: linear-gradient(
+    150deg,
+    rgba(30, 64, 175, 0.42),
+    rgba(109, 40, 217, 0.42),
+    rgba(192, 132, 252, 0.32)
+  );
   backdrop-filter: blur(12px);
   border: 1.5px solid var(--glass-border);
   border-radius: 22px;
   padding: 1.6rem 1.35rem;
   text-align: center;
   cursor: pointer;
-  transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
+  transition:
+    transform 0.3s ease,
+    box-shadow 0.3s ease,
+    border-color 0.3s ease;
   position: relative;
   overflow: hidden;
 }
 
-.moment-card:hover, .moment-card.active {
+.moment-card:hover,
+.moment-card.active {
   transform: translateY(-6px);
   border-color: #f3e8ff;
   box-shadow: 0 14px 30px rgba(124, 58, 237, 0.45);
@@ -498,13 +602,24 @@ body {
 }
 
 @keyframes fadeIn {
-  from { opacity: 0; transform: translateY(4px); }
-  to { opacity: 1; transform: translateY(0); }
+  from {
+    opacity: 0;
+    transform: translateY(4px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
 
 /* Carta Dedicatoria Interactiva */
 .letter-section {
-  background: linear-gradient(145deg, rgba(30, 58, 138, 0.42), rgba(88, 28, 135, 0.42), rgba(168, 85, 247, 0.35));
+  background: linear-gradient(
+    145deg,
+    rgba(30, 58, 138, 0.42),
+    rgba(88, 28, 135, 0.42),
+    rgba(168, 85, 247, 0.35)
+  );
   backdrop-filter: blur(14px);
   border: 1.5px solid var(--glass-border);
   border-radius: 28px;
@@ -570,5 +685,16 @@ body {
   }
   .letter-paper {
     padding: 1.5rem 1.2rem;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
   }
 }

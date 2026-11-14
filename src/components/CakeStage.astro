@@ -1,0 +1,62 @@
+---
+import Button from './Button.astro';
+import Heading from './Heading.astro';
+import Paragraph from './Paragraph.astro';
+---
+
+<section class="cake-section">
+  <Heading level={2} class="section-title">
+    Pide un Deseo y Sopla las Velas 🎂
+  </Heading>
+  <Paragraph class="section-desc">
+    Toca cada velita, presiona el botón de soplar o usa tu micrófono para apagarlas.
+  </Paragraph>
+
+  <div
+    class="cake-stage"
+    id="cake-stage"
+    tabindex="0"
+    role="region"
+    aria-label="Pastel interactivo de cumpleaños. Toca las velas para apagarlas."
+  >
+    <div class="candles-row">
+      <div class="candle">
+        <div class="wick"></div>
+        <div class="flame"></div>
+        <div class="smoke"></div>
+      </div>
+      <div class="candle">
+        <div class="wick"></div>
+        <div class="flame"></div>
+        <div class="smoke"></div>
+      </div>
+      <div class="candle">
+        <div class="wick"></div>
+        <div class="flame"></div>
+        <div class="smoke"></div>
+      </div>
+    </div>
+    <div class="cake-top"></div>
+    <div class="cake-middle"></div>
+    <div class="cake-bottom"></div>
+    <div class="cake-plate"></div>
+  </div>
+
+  <Paragraph id="wish-status" class="wish-status">
+    Pide un deseo con todo el corazón y apaga las velitas ✨
+  </Paragraph>
+
+  <div class="cake-controls">
+    <Button id="blow-candles-btn" variant="primary">
+      🌬️ Soplar las velas
+    </Button>
+    <Button id="mic-blow-btn" variant="secondary">
+      🎙️ Soplar con micrófono
+    </Button>
+  </div>
+  <div class="cake-relight-wrapper">
+    <button id="relight-candles-btn" type="button" class="btn-subtle">
+      🔥 Volver a encender
+    </button>
+  </div>
+</section>
