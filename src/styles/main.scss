@@ -1,0 +1,41 @@
+// Variables de paleta equilibrada: Azul, Morado y Lila
+$color-blue-deep: #1e3a8a;
+$color-blue-vibrant: #3b82f6;
+$color-purple-deep: #581c87;
+$color-purple-vibrant: #8b5cf6;
+$color-lilac-soft: #c084fc;
+$color-lilac-light: #f3e8ff;
+$color-white: #ffffff;
+
+:root {
+  --blue-main: #{$color-blue-vibrant};
+  --blue-deep: #{$color-blue-deep};
+  --purple-main: #{$color-purple-vibrant};
+  --purple-deep: #{$color-purple-deep};
+  --lilac-main: #{$color-lilac-soft};
+  --lilac-light: #{$color-lilac-light};
+  --glass-bg: rgba(255, 255, 255, 0.1);
+  --glass-border: rgba(233, 213, 255, 0.28);
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  -webkit-tap-highlight-color: transparent;
+}
+
+html {
+  scroll-behavior: smooth;
+  font-family: 'Quicksand', 'Segoe UI', system-ui, -apple-system, sans-serif;
+  color: var(--lilac-light);
+}
+
+body {
+  min-height: 100vh;
+  overflow-x: hidden;
+  // Equilibrio armónico en partes iguales de Azul, Morado y Lila
+  background: linear-gradient(135deg, #1d4ed8 0%, #6d28d9 50%, #c084fc 100%);
+  background-attachment: fixed;
+  position: relative;
+}
