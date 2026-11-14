@@ -1,6 +1,7 @@
 ---
 import Layout from '../layouts/Layout.astro';
 ---
+
 <Layout title="¡Feliz Cumpleaños, mi Anahí! 💙💜">
   <!-- Pantalla de Bienvenida Interactiva -->
   <div id="welcome-overlay" class="welcome-overlay">
@@ -30,7 +31,8 @@ import Layout from '../layouts/Layout.astro';
         ¡Feliz Cumpleaños, <span class="hero-name">mi Anahí</span>!
       </h1>
       <p class="hero-dedication">
-        Que este día esté lleno de alegría, abrazos y momentos inolvidables. Te desea lo mejor tu enamorado, <strong>José Luis</strong>, celebrando tu vida y todos nuestros años juntos.
+        Que este día esté lleno de alegría, abrazos y momentos inolvidables. Te desea lo mejor tu
+        enamorado, <strong>José Luis</strong>, celebrando tu vida y todos nuestros años juntos.
       </p>
       <div class="hero-actions">
         <button id="play-song-btn" class="btn-primary">
@@ -48,9 +50,21 @@ import Layout from '../layouts/Layout.astro';
 
       <div class="cake-stage" id="cake-stage" title="Toca las velas para apagarlas">
         <div class="candles-row">
-          <div class="candle"><div class="wick"></div><div class="flame"></div><div class="smoke"></div></div>
-          <div class="candle"><div class="wick"></div><div class="flame"></div><div class="smoke"></div></div>
-          <div class="candle"><div class="wick"></div><div class="flame"></div><div class="smoke"></div></div>
+          <div class="candle">
+            <div class="wick"></div>
+            <div class="flame"></div>
+            <div class="smoke"></div>
+          </div>
+          <div class="candle">
+            <div class="wick"></div>
+            <div class="flame"></div>
+            <div class="smoke"></div>
+          </div>
+          <div class="candle">
+            <div class="wick"></div>
+            <div class="flame"></div>
+            <div class="smoke"></div>
+          </div>
         </div>
         <div class="cake-top"></div>
         <div class="cake-middle"></div>
@@ -63,9 +77,15 @@ import Layout from '../layouts/Layout.astro';
       </p>
 
       <div class="cake-controls">
-        <button id="blow-candles-btn" class="btn-primary">🌬️ Soplar las velas</button>
-        <button id="mic-blow-btn" class="btn-secondary">🎙️ Soplar con micrófono</button>
-        <button id="relight-candles-btn" class="btn-secondary">🔥 Volver a encender</button>
+        <button id="blow-candles-btn" class="btn-primary">
+          🌬️ Soplar las velas
+        </button>
+        <button id="mic-blow-btn" class="btn-secondary">
+          🎙️ Soplar con micrófono
+        </button>
+        <button id="relight-candles-btn" class="btn-secondary">
+          🔥 Volver a encender
+        </button>
       </div>
     </section>
 
@@ -83,7 +103,8 @@ import Layout from '../layouts/Layout.astro';
           <div class="moment-icon">⛪</div>
           <h3 class="moment-title">Dónde Empezó Todo</h3>
           <p class="moment-text">
-            Nuestros caminos cruzándose en la Parroquia Apóstol Santiago, verte en los monaguillos y escucharte cantar con tanta alegría.
+            Nuestros caminos cruzándose en la Parroquia Apóstol Santiago, verte en los monaguillos y
+            escucharte cantar con tanta alegría.
           </p>
           <div class="moment-secret">
             💫 Cada recuerdo desde aquel lugar sigue brillando como el primer día.
@@ -94,7 +115,8 @@ import Layout from '../layouts/Layout.astro';
           <div class="moment-icon">🍽️</div>
           <h3 class="moment-title">Sabores y Paseos</h3>
           <p class="moment-text">
-            Salir a pasear juntos, conversar de todo y disfrutar de tus platos favoritos: una rica lasaña o un delicioso pollo al horno.
+            Salir a pasear juntos, conversar de todo y disfrutar de tus platos favoritos: una rica
+            lasaña o un delicioso pollo al horno.
           </p>
           <div class="moment-secret">
             💛 Hoy toca celebrar y consentirte con lo que más te gusta comer.
@@ -105,18 +127,18 @@ import Layout from '../layouts/Layout.astro';
           <div class="moment-icon">🎮</div>
           <h3 class="moment-title">Risas y Aventuras</h3>
           <p class="moment-text">
-            Nuestras partidas llenas de risas jugando Minecraft y Roblox, construyendo mundos y pasando el mejor rato juntos.
+            Nuestras partidas llenas de risas jugando Minecraft y Roblox, construyendo mundos y
+            pasando el mejor rato juntos.
           </p>
-          <div class="moment-secret">
-            💎 El mejor equipo en cada partida y en la vida real.
-          </div>
+          <div class="moment-secret">💎 El mejor equipo en cada partida y en la vida real.</div>
         </article>
 
         <article class="moment-card">
           <div class="moment-icon">💜</div>
           <h3 class="moment-title">Tu Esencia Hermosa</h3>
           <p class="moment-text">
-            Tan bella, bondadosa y pendiente de cuidarme siempre... incluso con ese toque poquito renegona que tanto me encanta de ti.
+            Tan bella, bondadosa y pendiente de cuidarme siempre... incluso con ese toque poquito
+            renegona que tanto me encanta de ti.
           </p>
           <div class="moment-secret">
             🌸 Te amo tal y como eres, mi cariño. ¡Gracias por tanto amor!
@@ -128,9 +150,7 @@ import Layout from '../layouts/Layout.astro';
     <!-- Carta Dedicatoria Interactiva -->
     <section class="letter-section">
       <h2 class="section-title">Un Mensaje para Ti, Mi Amor 💌</h2>
-      <p class="section-desc">
-        Presiona el botón para abrir tu dedicatoria de cumpleaños
-      </p>
+      <p class="section-desc">Presiona el botón para abrir tu dedicatoria de cumpleaños</p>
       <button id="toggle-letter-btn" class="btn-primary">
         Leer tu carta de cumpleaños 💌
       </button>
@@ -138,22 +158,29 @@ import Layout from '../layouts/Layout.astro';
       <div id="letter-paper" class="letter-paper">
         <div class="letter-greeting">¡Feliz cumpleaños, mi querida Anahí!</div>
         <p>
-          Mi amor, mi cariño: hoy es un día muy especial y mi mayor deseo es que este cumpleaños sea el mejor de todos. Me hace inmensamente feliz verte cumplir un año más de vida y agradecer por todos estos años que llevamos juntos, construyendo tantos recuerdos hermosos desde que nuestros caminos se cruzaron en la Parroquia Apóstol Santiago, rodeados de amigos y familiares.
+          Mi amor, mi cariño: hoy es un día muy especial y mi mayor deseo es que este cumpleaños sea
+          el mejor de todos. Me hace inmensamente feliz verte cumplir un año más de vida y agradecer
+          por todos estos años que llevamos juntos, construyendo tantos recuerdos hermosos desde que
+          nuestros caminos se cruzaron en la Parroquia Apóstol Santiago, rodeados de amigos y
+          familiares.
         </p>
         <p>
-          Aún guardo con muchísima ternura cada momento en el que te veía en los monaguillos, tu alegría al cantar y todo lo que hemos vivido desde entonces. Me encanta todo lo que compartimos: nuestras salidas juntos, sentarnos a disfrutar de una rica lasaña o un pollo al horno, reírnos jugando Minecraft o Roblox, y simplemente disfrutar de tu compañía.
+          Aún guardo con muchísima ternura cada momento en el que te veía en los monaguillos, tu
+          alegría al cantar y todo lo que hemos vivido desde entonces. Me encanta todo lo que
+          compartimos: nuestras salidas juntos, sentarnos a disfrutar de una rica lasaña o un pollo
+          al horno, reírnos jugando Minecraft o Roblox, y simplemente disfrutar de tu compañía.
         </p>
         <p>
-          Te amo tal y como eres, Anahí. Eres una persona sumamente bella, muy buena y con un corazón enorme. Aunque algunas veces seas un poquito renegona, hasta eso me encanta de ti, porque sé cuánto me quieres, cómo me cuidas y lo mucho que te preocupas siempre por mí y por mi salud. Gracias por estar en mi vida, mi amor. ¡Que tengas el cumpleaños más hermoso del mundo!
+          Te amo tal y como eres, Anahí. Eres una persona sumamente bella, muy buena y con un
+          corazón enorme. Aunque algunas veces seas un poquito renegona, hasta eso me encanta de ti,
+          porque sé cuánto me quieres, cómo me cuidas y lo mucho que te preocupas siempre por mí y
+          por mi salud. Gracias por estar en mi vida, mi amor. ¡Que tengas el cumpleaños más hermoso
+          del mundo!
         </p>
-        <div class="letter-signature">
-          Con todo mi amor, hoy y siempre ✨
-        </div>
+        <div class="letter-signature">Con todo mi amor, hoy y siempre ✨</div>
       </div>
     </section>
 
-    <footer class="footer-note">
-      Hecho con mucho cariño para mi Anahí 💙💜
-    </footer>
+    <footer class="footer-note">Hecho con mucho cariño para mi Anahí 💙💜</footer>
   </main>
 </Layout>

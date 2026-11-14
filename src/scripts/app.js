@@ -25,10 +25,31 @@ document.addEventListener('DOMContentLoaded', () => {
 
   // Notas de "Feliz Cumpleaños" (Frecuencia en Hz y duración en segundos)
   const happyBirthdayNotes = [
-    { f: 261.63, d: 0.35 }, { f: 261.63, d: 0.25 }, { f: 293.66, d: 0.55 }, { f: 261.63, d: 0.55 }, { f: 349.23, d: 0.55 }, { f: 329.63, d: 0.95 },
-    { f: 261.63, d: 0.35 }, { f: 261.63, d: 0.25 }, { f: 293.66, d: 0.55 }, { f: 261.63, d: 0.55 }, { f: 392.00, d: 0.55 }, { f: 349.23, d: 0.95 },
-    { f: 261.63, d: 0.35 }, { f: 261.63, d: 0.25 }, { f: 523.25, d: 0.55 }, { f: 440.00, d: 0.55 }, { f: 349.23, d: 0.55 }, { f: 329.63, d: 0.55 }, { f: 293.66, d: 0.85 },
-    { f: 466.16, d: 0.35 }, { f: 466.16, d: 0.25 }, { f: 440.00, d: 0.55 }, { f: 349.23, d: 0.55 }, { f: 392.00, d: 0.55 }, { f: 349.23, d: 1.1 }
+    { f: 261.63, d: 0.35 },
+    { f: 261.63, d: 0.25 },
+    { f: 293.66, d: 0.55 },
+    { f: 261.63, d: 0.55 },
+    { f: 349.23, d: 0.55 },
+    { f: 329.63, d: 0.95 },
+    { f: 261.63, d: 0.35 },
+    { f: 261.63, d: 0.25 },
+    { f: 293.66, d: 0.55 },
+    { f: 261.63, d: 0.55 },
+    { f: 392.0, d: 0.55 },
+    { f: 349.23, d: 0.95 },
+    { f: 261.63, d: 0.35 },
+    { f: 261.63, d: 0.25 },
+    { f: 523.25, d: 0.55 },
+    { f: 440.0, d: 0.55 },
+    { f: 349.23, d: 0.55 },
+    { f: 329.63, d: 0.55 },
+    { f: 293.66, d: 0.85 },
+    { f: 466.16, d: 0.35 },
+    { f: 466.16, d: 0.25 },
+    { f: 440.0, d: 0.55 },
+    { f: 349.23, d: 0.55 },
+    { f: 392.0, d: 0.55 },
+    { f: 349.23, d: 1.1 },
   ];
 
   function initAudio() {
@@ -67,7 +88,7 @@ document.addEventListener('DOMContentLoaded', () => {
   }
 
   function stopMelody() {
-    melodyTimeouts.forEach(t => clearTimeout(t));
+    melodyTimeouts.forEach((t) => clearTimeout(t));
     melodyTimeouts = [];
     isPlayingMelody = false;
     if (musicToggleBtn) musicToggleBtn.classList.remove('playing');
@@ -104,7 +125,7 @@ document.addEventListener('DOMContentLoaded', () => {
   // Sonido mágico al apagar velas
   function playWishChime() {
     initAudio();
-    const chord = [523.25, 659.25, 783.99, 1046.50];
+    const chord = [523.25, 659.25, 783.99, 1046.5];
     const now = audioCtx.currentTime;
     chord.forEach((freq, i) => {
       playBellNote(freq, 0.8, now + i * 0.12);
@@ -135,7 +156,7 @@ document.addEventListener('DOMContentLoaded', () => {
         color: palette[Math.floor(Math.random() * palette.length)],
         rotation: Math.random() * 360,
         vr: (Math.random() - 0.5) * 10,
-        alpha: 1
+        alpha: 1,
       });
     }
   }
@@ -157,7 +178,7 @@ document.addEventListener('DOMContentLoaded', () => {
       cCtx.fillRect(-p.size / 2, -p.size / 2, p.size, p.size * 0.65);
       cCtx.restore();
     });
-    confettiPieces = confettiPieces.filter(p => p.alpha > 0 && p.y < confettiCanvas.height + 30);
+    confettiPieces = confettiPieces.filter((p) => p.alpha > 0 && p.y < confettiCanvas.height + 30);
     requestAnimationFrame(updateConfetti);
   }
 
@@ -169,12 +190,12 @@ document.addEventListener('DOMContentLoaded', () => {
     y: Math.random() * window.innerHeight,
     r: Math.random() * 2.5 + 1,
     vy: -Math.random() * 0.4 - 0.15,
-    color: ['#93c5fd', '#c084fc', '#e9d5ff'][Math.floor(Math.random() * 3)]
+    color: ['#93c5fd', '#c084fc', '#e9d5ff'][Math.floor(Math.random() * 3)],
   }));
 
   function animateStars() {
     bCtx.clearRect(0, 0, bgCanvas.width, bgCanvas.height);
-    stars.forEach(s => {
+    stars.forEach((s) => {
       s.y += s.vy;
       if (s.y < -10) {
         s.y = bgCanvas.height + 10;
@@ -197,13 +218,14 @@ document.addEventListener('DOMContentLoaded', () => {
 
   // --- LÓGICA DE LAS VELAS ---
   function checkAllCandlesOut() {
-    const allOut = candles.every(c => c.classList.contains('out'));
+    const allOut = candles.every((c) => c.classList.contains('out'));
     if (allOut) {
-      wishStatus.textContent = '✨ ¡Deseo pedido! Que este cumpleaños sea el más hermoso de todos, mi Anahí 💜💙';
+      wishStatus.textContent =
+        '✨ ¡Deseo pedido! Que este cumpleaños sea el más hermoso de todos, mi Anahí 💜💙';
       launchConfetti(120);
       playWishChime();
     } else {
-      const remaining = candles.filter(c => !c.classList.contains('out')).length;
+      const remaining = candles.filter((c) => !c.classList.contains('out')).length;
       wishStatus.textContent = `Faltan ${remaining} velita(s) por apagar... ¡Sigue soplando! 🌬️`;
     }
   }
@@ -219,7 +241,7 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   }
 
-  candles.forEach(candle => {
+  candles.forEach((candle) => {
     candle.addEventListener('click', () => {
       if (!candle.classList.contains('out')) {
         candle.classList.add('out');
@@ -234,7 +256,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
   if (relightBtn) {
     relightBtn.addEventListener('click', () => {
-      candles.forEach(c => c.classList.remove('out'));
+      candles.forEach((c) => c.classList.remove('out'));
       wishStatus.textContent = 'Pide un deseo con todo el corazón y apaga las velitas 🎂';
     });
   }
@@ -258,8 +280,8 @@ document.addEventListener('DOMContentLoaded', () => {
           const avg = data.reduce((a, b) => a + b, 0) / data.length;
           if (avg > 42) {
             blowAllCandles();
-            stream.getTracks().forEach(t => t.stop());
-          } else if (!candles.every(c => c.classList.contains('out'))) {
+            stream.getTracks().forEach((t) => t.stop());
+          } else if (!candles.every((c) => c.classList.contains('out'))) {
             requestAnimationFrame(listenBlow);
           }
         };
@@ -292,7 +314,7 @@ document.addEventListener('DOMContentLoaded', () => {
   }
 
   // Tarjetas interactivas de gustos y recuerdos
-  momentCards.forEach(card => {
+  momentCards.forEach((card) => {
     card.addEventListener('click', () => {
       card.classList.toggle('active');
       launchConfetti(25);

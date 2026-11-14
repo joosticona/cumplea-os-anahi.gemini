@@ -8,13 +8,17 @@ interface Props {
 
 const { title } = Astro.props;
 ---
-<!DOCTYPE html>
+
+<!doctype html>
 <html lang="es">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>{title}</title>
-    <meta name="description" content="¡Feliz Cumpleaños, mi Anahí! Una sorpresa interactiva con todo mi cariño." />
+    <meta
+      name="description"
+      content="¡Feliz Cumpleaños, mi Anahí! Una sorpresa interactiva con todo mi cariño."
+    />
   </head>
   <body>
     <canvas id="bg-canvas"></canvas>
