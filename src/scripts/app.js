@@ -98,7 +98,7 @@ document.addEventListener('DOMContentLoaded', () => {
     melodyTimeouts = [];
     isPlayingMelody = false;
     if (musicToggleBtn) musicToggleBtn.classList.remove('playing');
-    if (musicLabel) musicLabel.textContent = 'Música silenciada 🔇';
+    if (musicLabel) musicLabel.textContent = 'Tocar melodía 🎵';
   }
 
   function playSingleMelodyIteration() {
